@@ -77,4 +77,7 @@ Kết quả:
 <img src="https://upanh1.com/images/Capturef1c298ed28817ac3.png">'
 
 ## Kết Luận
+Từ góc độ lý thuyết, nếu chúng ta muốn đưa ra các recommnendations dựa trên sở thích của mỗi người, thì đây có vẻ như là cách tiếp cận tốt. Kỹ thuật này cũng có thể xử lý tốt hơn nếu có data lớn hơn. Tuy nhiên, chúng ta vẫn mất một số meaningful signal bởi sử dụng a lower-rank matrix.
+
+Ngoài cách sử dụng trên thì ta có thể sử dụng thư viện surprise để triển khai SVD nhưng nó sẽ ngắn hơn rất nhiều và k cơ bản như ta sử dụng SVD của Scipy
 
