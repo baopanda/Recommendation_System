@@ -33,7 +33,11 @@ Singular Value Decomposition là việc phân tích một ma trận Am×n bất 
 * Vt: là movie "features" matrix.
 Trong đó U và Vt là các ma trận trực giao và biểu diễn những điều khác nhau. U diễn tả bn user like mỗi movie và Vt diễn tả mối tương quan giữa các user vs movie. 
 
-##Bài Toán
-### Load Dataset 
+## Bài Toán
+
+### Setup Rating Data
+Ta sẽ load 2 file csv là movies và rating và loại bỏ 2 cột k cần thiết là timestamp và gener.
 <img src="https://upanh1.com/images/Capturef7b2b0cc0c1d1f5c.png">
-ta sẽ load 2 file csv là movies và rating và loại bỏ 2 cột k cần thiết là timestamp và gener.
+
+Sau đó, ta sẽ cần tạo một ma trận raring với hàng là movieID, cột là userId và các giá trị trong đó là điểm rating của ng dùng đó ứng với movie tương ứng.Có một phương thức giúp ta làm điều này là pivot 
+<img src="https://upanh1.com/images/Capture6973073fd34b2309.png">
