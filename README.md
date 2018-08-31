@@ -59,6 +59,10 @@ Do ma trận sigma đc return về dưới dạng value chứ k phải ma trận
 ### Prediction từ Decomposed Matrices
 Hiện giờ chúng ta đã có mọi thứ cần để thực hiện movie prediction. Ta cần phải get lấy cái ma trận predict và add user mean vào ma trận này. Sau cùng là biến về format cũ trong pivot.
 <img src="https://upanh1.com/images/Capture65920ee564500066.png">
+
 Với ma trận dự đoán cho all users, ta có thể recommnend cho bất kỳ user nào. Bây giờ ta sẽ viết 1 hàm trả lại các movies có rating cao nhất mà ng dùng chưa rate nó. Tôi sẽ merge cái đó vào bảng để có thể so sánh chính xác hơn. Ta cũng trả về danh sách các bộ phim mà người dùng đã xếp hạng, để so sánh.
-<img src="https://upanh1.com/images/Capture1b2b16a754bf9350.png">
+<img src="https://upanh1.com/images/Capture4d4ef027ef6f4576.png">
+
+Kết quả: 
+<img src="https://upanh1.com/images/Capturea064cbc44ddc747d.png">
 
