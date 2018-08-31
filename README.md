@@ -50,9 +50,15 @@ Cuối cùng chúng ta cần phải de-normalize data (normalize bằng cách t�
 Với ma trận đã được chuẩn hóa thì ta sẽ đi vào thuật toán SVD.
 
 ### Singular Value Decomposition
-Scipy and Numpy both have functions to do the singular value decomposition. I'm going to use the Scipy function svds because it let's me choose how many latent factors I want to use to approximate the original ratings matrix (instead of having to truncate it after).
 Cả Scipy và Numpy đều có function SVD nhưng mình sẽ sử dụng SVD của Scipy vì nó scipy cho phép mình chọn các factor bên trong nó (ở đây là cho phép mình chọn k). Ở các bài toán nhỏ ntn thì k thường trong khoảng 25-100 là tốt nhất để cho lượng thông tin mất đi ở mức chấp nhận đc nhưng quá trình tính toán nhanh hơn rất nhiều. 
 
 Do ma trận sigma đc return về dưới dạng value chứ k phải ma trận đường chéo nên ta phải convert nó về ma trận đường chéo. 
 
 <img src="https://upanh1.com/images/Capture8a2c4175b6712cc9.png">
+
+### Prediction từ Decomposed Matrices
+Hiện giờ chúng ta đã có mọi thứ cần để thực hiện movie prediction. Ta cần phải get lấy cái ma trận predict và add user mean vào ma trận này. Sau cùng là biến về format cũ trong pivot.
+<img src="https://upanh1.com/images/Capture65920ee564500066.png">
+Với ma trận dự đoán cho all users, ta có thể recommnend cho bất kỳ user nào. Bây giờ ta sẽ viết 1 hàm trả lại các movies có rating cao nhất mà ng dùng chưa rate nó. Tôi sẽ merge cái đó vào bảng để có thể so sánh chính xác hơn. Ta cũng trả về danh sách các bộ phim mà người dùng đã xếp hạng, để so sánh.
+<img src="https://upanh1.com/images/Capture1b2b16a754bf9350.png">
+
