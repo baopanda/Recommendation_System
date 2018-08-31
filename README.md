@@ -41,4 +41,7 @@ Ta sẽ load 2 file csv là movies và rating và loại bỏ 2 cột k cần th
 
 Sau đó, ta sẽ cần tạo một ma trận raring với hàng là movieID, cột là userId và các giá trị trong đó là điểm rating của ng dùng đó ứng với movie tương ứng.Có một phương thức giúp ta làm điều này là pivot 
 <img src="https://upanh1.com/images/Capture6973073fd34b2309.png">
-<img src="https://upanh1.com/images/Capture9f1c20c6fe0863d0.png">
+<img src="https://upanh1.com/images/Capture9f1c20c6fe0863d0.png">'
+
+Cuối cùng chúng ta cần phải de-normalize data (normalize bằng cách tính mean điểm ng đó rate trên các bộ phim) và convert về numpy array để tính toán. 
+<img src="https://upanh1.com/images/Capture09a52dec976db489.png">'
