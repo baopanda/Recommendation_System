@@ -45,4 +45,13 @@ Sau đó, ta sẽ cần tạo một ma trận raring với hàng là movieID, c�
 
 Cuối cùng chúng ta cần phải de-normalize data (normalize bằng cách tính mean điểm ng đó rate trên các bộ phim) và convert về numpy array để tính toán. 
 
-<img src="https://upanh1.com/images/Capture09a52dec976db489.png">'
+<img src="https://upanh1.com/images/Capture09a52dec976db489.png">
+
+Với ma trận đã được chuẩn hóa thì ta sẽ đi vào thuật toán SVD.
+
+### Singular Value Decomposition
+Scipy and Numpy both have functions to do the singular value decomposition. I'm going to use the Scipy function svds because it let's me choose how many latent factors I want to use to approximate the original ratings matrix (instead of having to truncate it after).
+Cả Scipy và Numpy đều có function SVD nhưng mình sẽ sử dụng SVD của Scipy vì nó scipy cho phép mình chọn các factor bên trong nó (ở đây là cho phép mình chọn k). Ở các bài toán nhỏ ntn thì k thường trong khoảng 25-100 là tốt nhất để cho lượng thông tin mất đi ở mức chấp nhận đc nhưng quá trình tính toán nhanh hơn rất nhiều. 
+Do ma trận sigma đc return về dưới dạng value chứ k phải ma trận đường chéo nên ta phải convert nó về ma trận đường chéo. 
+
+<img src="https://upanh1.com/images/Capture8a2c4175b6712cc9.png">
