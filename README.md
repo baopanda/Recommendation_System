@@ -64,5 +64,15 @@ Với ma trận dự đoán cho all users, ta có thể recommnend cho bất k�
 <img src="https://upanh1.com/images/Capture4d4ef027ef6f4576.png">
 
 Kết quả: 
-<img src="https://upanh1.com/images/Capturea064cbc44ddc747d.png">
+
+<img src="https://upanh1.com/images/Capture3e8e7e1a177a6d3b.png">
+
+Ngoài ra, ta hoàn toàn có thể predict từ 1 user đã xem phim này và chọn ra các user có thể sẽ xem phim đấy
+<img src="https://upanh1.com/images/Captureec808c7653b398f9.png">
+
+Kết quả:
+
+<img src="https://upanh1.com/images/Capturef1c298ed28817ac3.png">'
+
+## Kết Luận
 
