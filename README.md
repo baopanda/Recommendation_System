@@ -44,4 +44,5 @@ Sau đó, ta sẽ cần tạo một ma trận raring với hàng là movieID, c�
 <img src="https://upanh1.com/images/Capture9f1c20c6fe0863d0.png">'
 
 Cuối cùng chúng ta cần phải de-normalize data (normalize bằng cách tính mean điểm ng đó rate trên các bộ phim) và convert về numpy array để tính toán. 
+
 <img src="https://upanh1.com/images/Capture09a52dec976db489.png">'
