@@ -19,4 +19,21 @@ Trong bộ dữ liệu gồm các thành phần sau:
 Do đây là bộ dữ liệu dùng để education và development nên grouplens đã preprocessing hết cho chúng ta và do yêu cầu bài toán nên ta chỉ cần sử dụng 2 file là movies.csv và rating.csv 
 
 ## Mô hình sử dụng
-Chúng ta sẽ sử dụng Matrix Factorization và Singular Value Decomposition cho hệ thống movies_recommendation này.
+Chúng ta sẽ sử dụng Matrix Factorization via Singular Value Decomposition cho hệ thống movies_recommendation này. Tôi không sử dụng user-based and item-based collaborative filtering vì 2 lý do chính sau:
+* Nó k sử dụng tốt trên một data lớn, đặc biệt là trên hệ thống thời gian thực based trên mối tương quan về hành vi của các người dùng vì nó cần thực hiện rất nhiều các phép toán.
+* Ma trận rating rất dễ bị overfit do các nhiễu về khẩu vị hay các mối quan tâm của người dùng.
+
+Vì vậy chúng ta cần apply **Dimensionality Reduction** technique để reduction dimension
+
+Singular Value Decomposition là việc phân tích một ma trận Am×n bất kỳ đều có thể phân tích thành dạng:
+<img src="https://upanh1.com/images/Capture18d044fc35d383b1.png">
+* R: là ma trận rating của ng dùng
+* U: là user "features" matrix
+* sigma: là ma trận đường chéo của Singular Value. 
+* Vt: là movie "features" matrix.
+Trong đó U và Vt là các ma trận trực giao và biểu diễn những điều khác nhau. U diễn tả bn user like mỗi movie và Vt diễn tả mối tương quan giữa các user vs movie. 
+
+##Bài Toán
+### Load Dataset 
+<img src="https://upanh1.com/images/Capturef7b2b0cc0c1d1f5c.png">
+ta sẽ load 2 file csv là movies và rating và loại bỏ 2 cột k cần thiết là timestamp và gener.
