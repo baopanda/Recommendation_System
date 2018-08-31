@@ -28,6 +28,7 @@ Vì vậy chúng ta cần apply **Dimensionality Reduction** technique để red
 Singular Value Decomposition là việc phân tích một ma trận Am×n bất kỳ đều có thể phân tích thành dạng:
 
 <img src="https://upanh1.com/images/Capture18d044fc35d383b1.png">
+
 * R: là ma trận rating của ng dùng
 * U: là user "features" matrix
 * sigma: là ma trận đường chéo của Singular Value. 
